@@ -1,8 +1,10 @@
+import "./Navbar.scss";
+
 const Navbar = () => {
 	return (
-		<div className="navbar__wrapper">
+		<div className="navbar">
 			<div className="navbar__left">
-				<div className="navbar__name">Minh Duc</div>
+				<div className="navbar__name">Minhduc</div>
 				<span>toggle</span>
 			</div>
 			<div className="navbar__right">
