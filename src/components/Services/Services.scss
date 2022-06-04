@@ -1,11 +1,14 @@
-.intro {
-	margin-top: 2rem;
-	position: relative;
+.services {
 	display: flex;
-	& > * {
+	padding: 5rem 0;
+	min-height: 100vh;
+	position: relative;
+	&__left {
+		position: relative;
 		flex: 1;
 	}
-	&__left {
+	&__right {
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		& > :nth-child(1) {
@@ -14,7 +17,7 @@
 		}
 		& > :nth-child(2) {
 			font-size: 3rem;
-			color: var(--yellow);
+			color: rgb(255, 162, 0);
 			margin-bottom: 1rem;
 		}
 		& > :nth-child(3) {
@@ -27,7 +30,7 @@
 			margin-top: 3rem;
 			align-self: flex-start;
 			cursor: pointer;
-			padding: 1rem 2rem;
+			padding: 0.6rem 2rem;
 			border-radius: 1rem;
 			border: none;
 			background-image: linear-gradient(to left, var(--yellow), var(--orange));
@@ -38,30 +41,29 @@
 				transform: translate(0, -10px);
 			}
 		}
-		.intro__icons {
-			display: flex;
-			& > * {
-				transform: scale(0.5);
-			}
-		}
 	}
-	&__right {
-		display: flex;
-		justify-content: center;
-		position: relative;
-		img {
-			width: 550px;
-			height: 550px;
-		}
-	}
+}
+
+.card1 {
+	top: -30%;
+	left: 0;
+}
+
+.card2 {
+	top: 0%;
+	left: 50%;
+}
+
+.card3 {
+	top: 40%;
+	left: 10%;
 }
 
 .blur1 {
 	top: 0;
-	right: 30%;
+	left: 50%;
 }
-
 .blur2 {
 	bottom: 0;
-	left: 70%;
+	left: 20%;
 }

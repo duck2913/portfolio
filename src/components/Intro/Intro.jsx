@@ -5,9 +5,9 @@ import Github from "../../img/github.png";
 import Linkedin from "../../img/linkedin.png";
 import Crown from "../../img/crown.png";
 import Thumbup from "../../img/thumbup.png";
-import FloatingBadge from "./FloatingBadge/FloatingBadge";
+import FloatingBadge from "../FloatingBadge/FloatingBadge";
 import GlassesEmoji from "../../img/glassesimoji.png";
-import Blur from "./Blur/Blur";
+import Blur from "../Blur/Blur";
 
 const Intro = () => {
 	return (
@@ -52,15 +52,11 @@ const Intro = () => {
 					<FloatingBadge img={Crown} text={"Web developer"} />
 				</div>
 				<div style={{ position: "absolute", bottom: "20%", right: 0 }}>
-					<FloatingBadge img={Thumbup} text={"2+ years"} />
+					<FloatingBadge img={Thumbup} text={"2+ years experience"} />
 				</div>
 			</div>
-			<div style={{ top: "0", right: "30%", position: "absolute" }}>
-				<Blur color={"lightpink"} top={0} left={0} />
-			</div>
-			<div style={{ bottom: "70%", left: "30%", position: "absolute" }}>
-				<Blur color={"lightblue"} bottom={"50%"} right={0} />
-			</div>
+			<Blur color={"lightgreen"} className={classes.blur1} />
+			<Blur color={"lightblue"} className={classes.blur2} />
 		</div>
 	);
 };
