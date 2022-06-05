@@ -1,0 +1,21 @@
+.footer {
+	margin: 0;
+	position: relative;
+	&-content {
+		text-align: center;
+		color: white;
+		top: 60%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		position: absolute;
+	}
+	&-links {
+		margin-top: 2rem;
+		display: flex;
+		gap: 3rem;
+		ion-icon {
+			color: white;
+			font-size: 4rem;
+		}
+	}
+}

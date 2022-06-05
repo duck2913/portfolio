@@ -5,7 +5,10 @@
 }
 
 .App {
-	padding: 0rem 5rem;
 	overflow: hidden;
 	color: var(--black);
+}
+
+.App > :not(:last-child) {
+	padding: 2rem 5rem;
 }
