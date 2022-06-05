@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 const Services = () => {
 	const transition = { duration: 2, type: "string" };
 	return (
-		<div className="services">
+		<div className="services" id="services">
 			<div className="services__left">
 				<motion.div
 					initial={{ top: "-30%", left: "10%" }}

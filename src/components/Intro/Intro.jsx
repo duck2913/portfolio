@@ -14,7 +14,7 @@ const Intro = () => {
 	const transition = { duration: 2, type: "spring" };
 
 	return (
-		<div className={classes["intro"]}>
+		<div className={classes["intro"]} id="intro">
 			<div className={classes["intro__left"]}>
 				<span>Hi I'm</span>
 				<span>Minh Duc</span>

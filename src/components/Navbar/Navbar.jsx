@@ -1,4 +1,5 @@
 import "./Navbar.scss";
+import { Link } from "react-scroll/modules";
 
 const Navbar = () => {
 	return (
@@ -8,10 +9,18 @@ const Navbar = () => {
 			</div>
 			<div className="navbar__right">
 				<ul className="navbar__list">
-					<li className="navbar__item">Home</li>
-					<li className="navbar__item">Service</li>
-					<li className="navbar__item">Experience</li>
-					<li className="navbar__item">Portfolio</li>
+					<Link spy={true} smooth={true} to="intro" activeClass="activeClass">
+						<li className="navbar__item">Home</li>
+					</Link>
+					<Link spy={true} smooth={true} to="services">
+						<li className="navbar__item">Service</li>
+					</Link>
+					<Link spy={true} smooth={true} to="experience">
+						<li className="navbar__item">Experience</li>
+					</Link>
+					<Link spy={true} smooth={true} to="portfolio">
+						<li className="navbar__item">Portfolio</li>
+					</Link>
 				</ul>
 				<button className="btn">Contact me</button>
 			</div>
