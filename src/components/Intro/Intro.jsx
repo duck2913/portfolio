@@ -8,8 +8,11 @@ import Thumbup from "../../img/thumbup.png";
 import FloatingBadge from "../FloatingBadge/FloatingBadge";
 import GlassesEmoji from "../../img/glassesimoji.png";
 import Blur from "../Blur/Blur";
+import { motion } from "framer-motion";
 
 const Intro = () => {
+	const transition = { duration: 2, type: "spring" };
+
 	return (
 		<div className={classes["intro"]}>
 			<div className={classes["intro__left"]}>
@@ -37,23 +40,35 @@ const Intro = () => {
 					width={500}
 					height={500}
 				/>
-				<img
+				<motion.img
+					initial={{ right: "10%" }}
+					whileInView={{ right: "0%" }}
+					transition={transition}
 					src={GlassesEmoji}
 					alt="emoji"
 					style={{
 						position: "absolute",
 						top: 0,
-						right: "10%",
 						width: "5rem",
 						height: "5rem",
 					}}
 				/>
-				<div style={{ position: "absolute", top: "10%", left: "-10%" }}>
+				<motion.div
+					initial={{ top: "-10%", left: "-10%" }}
+					whileInView={{ top: "10%", left: "-10%" }}
+					transition={transition}
+					style={{ position: "absolute" }}
+				>
 					<FloatingBadge img={Crown} text={"Web developer"} />
-				</div>
-				<div style={{ position: "absolute", bottom: "20%", right: 0 }}>
+				</motion.div>
+				<motion.div
+					initial={{ bottom: "-5%", right: 0 }}
+					whileInView={{ bottom: "20%", right: 0 }}
+					transition={transition}
+					style={{ position: "absolute", bottom: "20%", right: 0 }}
+				>
 					<FloatingBadge img={Thumbup} text={"2+ years experience"} />
-				</div>
+				</motion.div>
 			</div>
 			<Blur color={"lightgreen"} className={classes.blur1} />
 			<Blur color={"lightblue"} className={classes.blur2} />
